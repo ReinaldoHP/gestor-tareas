@@ -1,0 +1,7 @@
+<h2>Lista de tarea</h2>
+<app-tarea-hijo
+  *ngFor="let tarea of tareas"
+  [tarea]="tarea"
+  (lista)="completarTarea($event)"
+>
+</app-tarea-hijo>

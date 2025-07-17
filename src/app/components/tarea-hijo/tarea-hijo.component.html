@@ -1,0 +1,13 @@
+<div class="tarea-hijo" [class.tarea-completada]="tarea.completado">
+  <div class="contenido">
+    {{ tarea.id }}, {{ tarea.descripcion }}
+    <span class="estado">
+      {{ tarea.completado ? "✅ Hecho" : "❌ Falta" }}
+    </span>
+    , {{ tarea.prioridad }}, {{ tarea.fechaLimite }}
+  </div>
+
+  <button (click)="onLista()">
+    {{ tarea.completado ? "Desmarcar" : "Completar" }}
+  </button>
+</div>

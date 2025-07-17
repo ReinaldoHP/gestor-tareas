@@ -1,0 +1,19 @@
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TareaInterface } from '../../interfaces/tarea';
+
+@Component({
+  selector: 'app-tarea-hijo',
+  imports: [CommonModule],
+  templateUrl: './tarea-hijo.component.html',
+  styleUrl: './tarea-hijo.component.css',
+})
+export class TareaHijoComponent {
+  @Input() tarea!: TareaInterface;
+
+  @Output() lista = new EventEmitter<number>();
+
+  onLista() {
+    this.lista.emit(this.tarea.id);
+  }
+}
