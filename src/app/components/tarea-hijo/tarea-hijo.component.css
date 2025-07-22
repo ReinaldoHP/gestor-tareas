@@ -2,38 +2,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #3ebfd9;
+  background: #f8f9fa;
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: background-color 0.3s ease;
 }
 
-.tarea:hover {
-  background-color: #f9f9f9;
+.tarea-hijo.tarea-completada {
+  background-color: #d4edda;
 }
 
-.tarea-completada {
-  text-decoration: line-through;
-  color: #888;
+.contenido {
+  flex-grow: 1;
 }
 
 .estado {
-  margin-left: 10px;
   font-weight: bold;
+  color: #007bff;
 }
 
 button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 10px 14px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }

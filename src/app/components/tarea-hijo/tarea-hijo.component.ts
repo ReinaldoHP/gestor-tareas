@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TareaInterface } from '../../interfaces/tarea';
+import { PrioridadPipe } from '../../pipes/prioridad.pipe';
 
 @Component({
   selector: 'app-tarea-hijo',
-  imports: [CommonModule],
+  imports: [CommonModule, PrioridadPipe],
   templateUrl: './tarea-hijo.component.html',
   styleUrl: './tarea-hijo.component.css',
 })

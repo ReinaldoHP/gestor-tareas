@@ -1,6 +1,19 @@
 <h2>Lista de tarea</h2>
+
+<div class="busqueda">
+  <input
+    type="text"
+    placeholder="Buscar por descripción..."
+    [(ngModel)]="busqueda"
+    (input)="filtrarTareas()"
+  />
+  <rh-button label="Completado" (click)="getTareaCompletada()"></rh-button>
+  <rh-button label="Falta" (click)="getTareaIncompleta()"></rh-button>
+  <rh-button label="Todas" (click)="mostrarTodasLasTareas()"></rh-button>
+</div>
+
 <app-tarea-hijo
-  *ngFor="let tarea of tareas"
+  *ngFor="let tarea of tareasMostradas"
   [tarea]="tarea"
   (lista)="completarTarea($event)"
 >
